@@ -37,15 +37,15 @@ body {
     display: inline-block;
     margin-top: 10px;
     padding: 10px 15px;
-    background-color: #6cab5c;
     color: white;
     text-decoration: none;
     border-radius: 4px;
     font-weight: bold;
+    background-color: #6cab5c;
 }
 
 .botao:hover {
-    background-color: #005bb5;
+    background-color: #559346;
 }
 
 .grafico {
