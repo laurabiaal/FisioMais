@@ -1,11 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tela de Agendamentos</title>
+    <link rel="stylesheet" href="/css/agendamento.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Agenda de Consultório/Estúdio</h1>
+      </header>
+      <main>
+        <section class="calendar">
+          <h2>Calendário Interativo</h2>
+          <div class="view-options">
+            <button>Diário</button>
+            <button>Semanal</button>
+            <button>Mensal</button>
+          </div>
+          <div class="calendar-view">
+            <!-- Calendário renderizado dinamicamente -->
+            <p>Visualização do calendário aqui...</p>
+          </div>
+        </section>
+        <section class="create-appointment">
+          <h2>Criar Novo Agendamento</h2>
+          <form id="appointment-form">
+            <label for="client">Cliente:</label>
+            <input type="text" id="client" name="client" required />
+
+            <label for="professional">Profissional:</label>
+            <input type="text" id="professional" name="professional" required />
+
+            <label for="date">Data:</label>
+            <input type="date" id="date" name="date" required />
+
+            <label for="time">Hora:</label>
+            <input type="time" id="time" name="time" required />
+
+            <label for="service">Tipo de Serviço:</label>
+            <input type="text" id="service" name="service" required />
+
+            <button type="submit">Agendar</button>
+          </form>
+        </section>
+        <section class="appointment-status">
+          <h2>Status dos Agendamentos</h2>
+          <ul>
+            <li>Agendado</li>
+            <li>Realizado</li>
+            <li>Cancelado</li>
+          </ul>
+        </section>
+      </main>
+    </div>
+  </body>
 </html>
