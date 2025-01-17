@@ -35,7 +35,9 @@
   margin: 0;
 }
 
-body, input, button {
+body,
+input,
+button {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
 }
@@ -45,7 +47,8 @@ body {
   color: var(--text-color);
 }
 
-input, button {
+input,
+button {
   border: none;
   outline: none;
 }
@@ -193,12 +196,14 @@ img {
   transform: translateY(-0.25rem);
 }
 
-.atalho-cadastro, .atalho-login {
+.atalho-cadastro,
+.atalho-login {
   text-align: center;
   font-size: var(--small-font-size);
 }
 
-.atalho-cadastro a, .atalho-login a {
+.atalho-cadastro a,
+.atalho-login a {
   background: none;
   color: var(--first-color);
   font-size: var(--small-font-size);
@@ -207,7 +212,8 @@ img {
   transition: color 0.4s;
 }
 
-.atalho-cadastro a:hover, .atalho-login a:hover {
+.atalho-cadastro a:hover,
+.atalho-login a:hover {
   color: var(--first-color-alt);
 }
 
@@ -220,7 +226,9 @@ img {
   padding-block: 2rem 1rem;
 }
 
-.login-input:not(:placeholder-shown).login-input:not(:focus) ~ .login-box label {
+.login-input:not(:placeholder-shown).login-input:not(:focus)
+  ~ .login-box
+  label {
   transform: translateY(-12px);
   font-size: var(--tiny-font-size);
 }
@@ -289,4 +297,27 @@ img {
   .login__img {
     transform: translate(0rem, 0rem);
   }
+}
+
+select#funcao {
+  padding: 10px;
+  font-size: 16px;
+  color: #333;
+  background-color: #f9f9f9;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+select#funcao:focus {
+  border-color: #559346;
+  background-color: #fff;
+}
+
+select#funcao option {
+  padding: 10px;
+  font-size: 16px;
+  color: #333;
+  background-color: #f9f9f9;
 }
