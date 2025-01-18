@@ -1,59 +1,127 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tela de Agendamentos</title>
-    <link rel="stylesheet" href="/css/agendamento.css" />
-  </head>
-  <body>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Agendamentos</title>
+    <link rel="stylesheet" href="/css/agendamento.css">
+</head>
+<body>
     <div class="container">
-      <header>
-        <h1>Agenda de Consultório/Estúdio</h1>
-      </header>
-      <main>
-        <section class="calendar">
-          <h2>Calendário Interativo</h2>
-          <div class="view-options">
-            <button>Diário</button>
-            <button>Semanal</button>
-            <button>Mensal</button>
-          </div>
-          <div class="calendar-view">
-            <!-- Calendário renderizado dinamicamente -->
-            <p>Visualização do calendário aqui...</p>
-          </div>
-        </section>
-        <section class="create-appointment">
-          <h2>Criar Novo Agendamento</h2>
-          <form id="appointment-form">
-            <label for="client">Cliente:</label>
-            <input type="text" id="client" name="client" required />
+    
+        <div class="form-container">
+            <h1>Tela de Agendamento</h1>
+            
+            <form class="form-agendamento">
+                <div class="form-grupo">
+                    <label for="cliente">Cliente:</label>
+                    <input type="text" id="cliente" placeholder="Digite seu Nome" required>
+                </div>
 
-            <label for="professional">Profissional:</label>
-            <input type="text" id="professional" name="professional" required />
+                <div class="form-grupo">
+                    <label for="profissional">Profissional:</label>
+                    <input type="text" id="profissional" placeholder="Digite o nome do Profissional" required>
+                </div>
 
-            <label for="date">Data:</label>
-            <input type="date" id="date" name="date" required />
+                <div class="form-row">
+                    <div class="form-grupo">
+                        <label for="data">Data:</label>
+                        <input type="date" id="data" required>
+                    </div>
 
-            <label for="time">Hora:</label>
-            <input type="time" id="time" name="time" required />
+                    <div class="form-grupo">
+                        <label for="hora">Hora:</label>
+                        <select id="hora" required>
+                            <option value="">Selecione</option>
+                            <option>07:30</option>
+                            <option>08:00</option>
+                            <option>08:30</option>
+                            <option>09:00</option>
+                            <option>09:30</option>
+                            <option>10:00</option>
+                            <option>10:30</option>
+                            <option>11:00</option>
+                            <option>11:30</option>
+                            <option>14:00</option>  
+                            <option>14:30</option>  
+                            <option>15:00</option>
+                            <option>15:30</option>
+                            <option>16:00</option>
+                            <option>16:30</option>
+                            <option>17:00</option>
+                            <option>17:30</option>
+                        </select>
+                    </div>
+                </div>
 
-            <label for="service">Tipo de Serviço:</label>
-            <input type="text" id="service" name="service" required />
+                <div class="form-grupo">
+                    <label for="servico">Tipo de Serviço:</label>
+                    <select id="servico" required>
+                        <option value="">Selecione o serviço</option>
+                        <option>Fisioterapia</option>
+                        <option>Consulta Regular</option>
+                        <option>Avaliação</option>
+                    </select>
+                </div>
 
-            <button type="submit">Agendar</button>
-          </form>
-        </section>
-        <section class="appointment-status">
-          <h2>Status dos Agendamentos</h2>
-          <ul>
-            <li>Agendado</li>
-            <li>Realizado</li>
-            <li>Cancelado</li>
-          </ul>
-        </section>
-      </main>
+                <div class="form-grupo">
+                    <label for="status">Status:</label>
+                    <select id="status" required>
+                        <option value="agendado">Agendado</option>
+                        <option value="realizado">Realizado</option>
+                        <option value="cancelado">Cancelado</option>
+                    </select>
+                </div>
+
+                <div class="form-grupo">
+                    <label for="observacoes">Observações:</label>
+                    <textarea id="observacoes" rows="3" placeholder="Adicione observações importantes"></textarea>
+                    <!-- Rows="3" Numeros de "Quadrados invisiveis" -->
+                </div>
+
+                <div class="botoes-container">
+                    <button type="submit" class="btn-agendar">Agendar</button>
+                    <button type="button" class="btn-reagendar">Reagendar</button>
+                    <button type="button" class="btn-cancelar">Cancelar</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Lista de Agendamentos -->
+        <div class="lista-agendamentos">
+            <h2>Agendamentos</h2>
+            
+            <!-- Filtros -->
+            <div class="filtros">
+                <select class="filtro-data">
+                    <option value="dia">Visualização Diária</option>
+                    <option value="semana">Visualização Semanal</option>
+                    <option value="mes">Visualização Mensal</option>
+                </select>
+                <input type="date" class="filtro-data-especifica">
+            </div>
+
+            <!-- Cards de Agendamento -->
+            <div class="cards-container">
+                <div class="card-agendamento">
+                    <div class="card-header">
+                        <span class="status-agendado">Agendado</span>
+                        <button class="btn-check-in">Check-in</button>
+                    </div>
+                    <div class="card-body">
+                        <p><strong>Cliente:</strong> Cainã</p>
+                        <p><strong>Profissional:</strong> Dr. Feliciano</p>
+                        <p><strong>Data:</strong> 2025-01-30</p>
+                        <p><strong>Hora:</strong> 08:15</p>
+                        <p><strong>Serviço:</strong> Fisioterapia</p>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn-editar">Editar</button>
+                        <button class="btn-excluir">Excluir</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </body>
+</body>
 </html>
