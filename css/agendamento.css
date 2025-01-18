@@ -1,3 +1,4 @@
+/* Reset básico */
 * {
   margin: 0;
   padding: 0;
@@ -10,52 +11,61 @@ body {
   padding: 20px;
 }
 
-.container {
+/* Container Principal */
+.sistema {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   max-width: 1200px;
   margin: 0 auto;
-  display: grid;  
-  gap: 20px;
-  grid-template-columns: 1fr 1fr;
 }
 
-/* Estilos do Formulário */
-.form-container {
+/* Painel Principal */
+.painel {
   background-color: white;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
+.titulo-principal {
   color: #333;
   margin-bottom: 20px;
   font-size: 24px;
   text-align: center;
 }
 
-.form-grupo {
+/* Formulário */
+.formulario {
+  width: 100%;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
   margin-bottom: 15px;
 }
 
-.form-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+.grupo-horario {
+  display: flex;
   gap: 15px;
 }
 
+/* Elementos do Formulário */
 label {
-  display: block;
-  margin-bottom: 5px;
-  color: #666;
   font-size: 14px;
+  color: #666;
 }
 
-input, select, textarea {
-  width: 100%;
+input,
+select,
+textarea {
   padding: 8px;
   border: 1px solid #ddd;
   border-radius: 4px;
   font-size: 14px;
+  width: 100%;
 }
 
 textarea {
@@ -63,73 +73,73 @@ textarea {
 }
 
 /* Botões */
-.botoes-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+.grupo-botoes {
+  display: flex;
   gap: 10px;
   margin-top: 20px;
 }
 
-.btn-agendar {
+.botao {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: opacity 0.2s;
+}
+
+.botao:hover {
+  opacity: 0.9;
+}
+
+.confirmar {
   background-color: #6b4fbb;
   color: white;
-  padding: 10px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
 }
 
-.btn-reagendar {
+.modificar {
   background-color: #ffd700;
   color: #333;
-  padding: 10px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
 }
 
-.btn-cancelar {
+.cancelar {
   background-color: #dc3545;
   color: white;
-  padding: 10px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
 }
 
-/* Lista de Agendamentos */
-.lista-agendamentos {
+/* Visualização da Agenda */
+.agenda {
   background-color: white;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.filtros {
+.controles-visualizacao {
   display: flex;
   gap: 10px;
   margin-bottom: 20px;
 }
 
-.filtro-data, .filtro-data-especifica {
+.filtro-data {
   padding: 8px;
   border: 1px solid #ddd;
   border-radius: 4px;
 }
 
-/* Cards de Agendamento */
-.cards-container {
-  display: grid;
+.lista-consultas {
+  display: flex;
+  flex-direction: column;
   gap: 15px;
 }
 
-.card-agendamento {
+.consulta {
   border: 1px solid #ddd;
   border-radius: 8px;
   overflow: hidden;
 }
 
-.card-header {
+.cabecalho-consulta {
   background-color: #f8f9fa;
   padding: 10px;
   display: flex;
@@ -137,7 +147,7 @@ textarea {
   align-items: center;
 }
 
-.status-agendado {
+.indicador-status {
   background-color: #e3f2fd;
   color: #1976d2;
   padding: 4px 8px;
@@ -145,85 +155,48 @@ textarea {
   font-size: 12px;
 }
 
-.btn-check-in {
+.botao-chegada {
   background-color: #4caf50;
   color: white;
-  border: none;
   padding: 5px 10px;
+  border: none;
   border-radius: 4px;
   cursor: pointer;
 }
 
-.card-body {
+.conteudo-consulta {
   padding: 15px;
 }
 
-.card-body p {
-  margin-bottom: 5px;
+.info-consulta {
   font-size: 14px;
+  margin-bottom: 5px;
 }
 
-.card-footer {
+.acoes-consulta {
   padding: 10px;
   background-color: #f8f9fa;
   display: flex;
   gap: 10px;
 }
 
-.btn-editar {
+.botao-editar {
   background-color: #ffc107;
   color: #333;
 }
 
-.btn-excluir {
+.botao-excluir {
   background-color: #dc3545;
   color: white;
 }
 
-.btn-editar, .btn-excluir {
-  padding: 5px 10px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
 /* Responsividade */
 @media (max-width: 768px) {
-  .container {
-      grid-template-columns: 1fr;
+  .grupo-horario {
+    flex-direction: column;
   }
 
-  .form-row {
-      grid-template-columns: 1fr;
+  .grupo-botoes {
+    flex-direction: column;
   }
-
-  .botoes-container {
-      grid-template-columns: 1fr;
-  }
-}
-
-/* Status dos agendamentos */
-.status-realizado {
-  background-color: #e8f5e9;
-  color: #2e7d32;
-}
-
-.status-cancelado {
-  background-color: #ffebee;
-  color: #c62828;
-}
-
-/* Hover effects */
-.btn-agendar:hover { background-color: #563d99; }
-.btn-reagendar:hover { background-color: #e6c200; }
-.btn-cancelar:hover { background-color: #bd2130; }
-.btn-check-in:hover { background-color: #43a047; }
-.btn-editar:hover { background-color: #e0a800; }
-.btn-excluir:hover { background-color: #bd2130; }
-
-/* Focus styles */
-input:focus, select:focus, textarea:focus {
-  outline: none;
-  border-color: #6b4fbb;
-  box-shadow: 0 0 0 2px rgba(107, 79, 187, 0.1);
 }
