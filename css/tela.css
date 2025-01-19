@@ -4,10 +4,10 @@ body {
     padding: 0;
     background-color: #d9d9ed92;
     color: #333;
-    background-image: url('fisioterapeuta-idosa.jpg.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    background-image: url('/img/fisioterapeuta-idosa.png');
 }
 
 .conteiner {
