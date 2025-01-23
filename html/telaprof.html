@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,34 +9,14 @@
     <link rel="stylesheet" href="/css/base.css">
     <link rel="stylesheet" href="/css/telaprof.css">
 </head>
-
 <body>
     <iframe id="header-frame" src="header.html"></iframe>
 
-    <div class="profissionais">
-        <h1>Cadastro de Profissionais</h1>
-        <form action="" method="post">
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome">
 
-            <label for="cpf">Cpf:</label>
-            <input type="number" id="cpf" name="CPF">
-
-            <label for="telefone">Telefone:</label>
-            <input type="tel" id="telefone" name="telefone">
-
-            <label for="especialidade">Especialidade:</label>
-            <input type="text" id="especialidade" name="especialidade">
-
-            <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email">
-
-            <button type="submit">Cadastrar</button>
-        </form>
-    </div>
     <div class="profissionais">
 
         <h2>Lista de Profissionais</h2>
+
         <table>
             <thead>
                 <tr>
@@ -105,9 +86,15 @@
                 </tr>
             </tbody>
         </table>
+
+        <div class="botao">
+            <a href="cadprof.html" class="botao-link">Cadastre Profissional</a>
+        </div>
+     
     </div>
 
     <iframe id="footer-frame" src="footer.html"></iframe>
 </body>
+
 
 </html>
