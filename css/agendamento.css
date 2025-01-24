@@ -1,98 +1,209 @@
-/* styles.css */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f9;
+  background-color: #f5f5f5;
 }
 
+iframe {
+  border: none;
+  width: 100%;
+}
+
+#footer-frame {
+  padding-top: 30px;
+  border: none;
+}
 .container {
-  max-width: 900px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
-  background: #ffffff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  gap: 30px;
+  bottom: 10px;
 }
 
-header {
-  text-align: center;
-  margin-bottom: 20px;
+.container-form {
+  width: 570px;
+  height: 600px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 8px;
 }
 
 h1 {
-  font-size: 24px;
-  color: #333;
+  color: #2d2c2c;
+  margin-bottom: 20px;
+  font-size: 30px;
+  text-align: center;
 }
 
-main {
-  display: grid;
-  gap: 20px;
-}
-
-section {
-  padding: 15px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  background-color: #fff;
-}
-
-h2 {
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-
-.view-options button {
-  padding: 10px 15px;
-  margin-right: 10px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.view-options button:hover {
-  background-color: #0056b3;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+.form-container {
+  margin-bottom: 15px;
 }
 
 label {
-  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  color: #666;
+  font-size: 14px;
 }
 
-input {
+input,
+select,
+textarea {
+  width: 97%;
   padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  border: 1px solid #d4d2d2b3;
+  border-radius: 4px;
+  font-size: 14px;
 }
 
-button[type="submit"] {
-  padding: 10px 15px;
-  background-color: #28a745;
+textarea {
+  resize: none;
+}
+
+/* Estilo para o wrapper de data e hora */
+.data-hora-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+/* Estilos dos botões */
+.botoes-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.btn-agendar {
+  background-color: #185d36;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 160px;
+}
+
+.btn-cancelar {
+  background-color: #185d36;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 160px;
+}
+
+/* lista de agendamentos */
+.filtros {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filtro-data,
+.filtro-data-especifica {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+h2 {
+  color: #2d2c2c;
+  margin-bottom: 20px;
+  font-size: 24px;
+  text-align: center;
+}
+
+.lista-agendamentos {
+  width: 570px;
+  min-height: 570px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cards-container {
+  display: grid;
+  gap: 15px;
+}
+
+.card-agendamento {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card-header {
+  background-color: #f8f9fa;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.status-agendado {
+  background-color: #e3f2fd;
+  color: #1976d2;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+.btn-check-in {
+  background-color: #4caf50;
   color: white;
   border: none;
-  border-radius: 5px;
+  padding: 5px 10px;
+  border-radius: 4px;
   cursor: pointer;
 }
 
-button[type="submit"]:hover {
-  background-color: #218838;
+.card-body {
+  padding: 15px;
 }
 
-ul {
-  list-style-type: none;
-  padding: 0;
+.card-body p {
+  margin-bottom: 5px;
+  font-size: 14px;
 }
 
-ul li {
-  margin: 5px 0;
-  padding: 5px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+.card-footer {
+  padding: 10px;
   background-color: #f8f9fa;
+  display: flex;
+  gap: 10px;
 }
+
+.btn-editar {
+  background-color: #ffc107;
+  color: #333;
+}
+
+.btn-excluir {
+  background-color: #dc3545;
+  color: white;
+}
+
+.btn-editar,
+.btn-excluir {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Mensagem de nenhum agendamento
+.mensagem-age {
+  text-align: center;
+  color: #666;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  margin: 10px 0;
+} */
