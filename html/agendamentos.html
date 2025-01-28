@@ -59,9 +59,30 @@
           <div class="form-container">
             <label for="servico">Tipo de Serviço:</label>
             <select id="servico" required>
+
               <option >Selecione o Serviço</option>
+
+              <option value="">Selecione o Serviço</option>
+
               <option>Fisioterapia</option>
               <option>Pilates</option>
+            </select>
+          </div>
+
+
+          <!-- Observações -->
+          <div class="form-container">
+            <label for="observacoes">Observações:</label>
+            <textarea id="observacoes" rows="5" placeholder="Adicione observações importantes"></textarea>
+          </div>
+
+
+          <div class="form-container">
+            <label for="status">Status:</label>
+            <select id="status" required>
+              <option value="agendado">Agendado</option>
+              <option value="realizado">Realizado</option>
+              <option value="cancelado">Cancelado</option>
             </select>
           </div>
 

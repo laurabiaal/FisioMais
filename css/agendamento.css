@@ -28,12 +28,11 @@ iframe {
   background-color: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-h1 {
-  color: #2d2c2c;
-  margin-bottom: 20px;
-  font-size: 30px;
+
+header {
   text-align: center;
 }
 
@@ -135,20 +134,18 @@ h2 {
 .card-agendamento {
   border: 1px solid #ddd;
   border-radius: 8px;
-  overflow: hidden;
+  background-color: #fff;
 }
 
-.card-header {
-  background-color: #f8f9fa;
-  padding: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
 }
 
-
-.btn-check-in {
-  background-color: #4caf50;
+.view-options button {
+  padding: 10px 15px;
+  margin-right: 10px;
+  background-color: #007bff;
   color: white;
   border: none;
   padding: 5px 10px;
