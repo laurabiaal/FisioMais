@@ -96,22 +96,22 @@ body {
 }
 
 .step:nth-child(1):before {
-    content: 'Cart';
+    content: 'Carrinho';
 }
 
 .step:nth-child(2):before {
     right: -40px;
-    content: 'Confirmation';
+    content: 'Confirmação';
 }
 
 .step:nth-child(3):before {
     right: -30px;
-    content: 'Payment';
+    content: 'Pagamento';
 }
 
 .step:nth-child(4):before {
     right: 0;
-    content: 'Finish';
+    content: 'Finalizar';
 }
 
 .payment-method {
@@ -191,19 +191,19 @@ input[type='password']:focus {
     border-color: rgb(119, 219, 119);
 }
 
-#date {
+#data {
     background: url(img/icons_calendar_black.png) no-repeat 95%;
 }
 
-#cardholder {
+#titular {
     background: url(img/icons_person_black.png) no-repeat 95%;
 }
 
-#cardnumber {
+#numerocartao {
     background: url(img/icons_card_black.png) no-repeat 95%;
 }
 
-#verification {
+#verificacao {
     background: url(img/icons_lock_black.png) no-repeat 95%;
 }
 
